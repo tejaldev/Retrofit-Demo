@@ -11,6 +11,9 @@ import retrofit.http.Path;
  */
 public interface GitAPI {
 
+    //adding callback makes this method async.
     @GET("/users/{user}")
     public void getFeedFromUser(@Path("user") String user, Callback<GitModel> response);
+
+    //If method contains return type => implies its synchronous
 }
